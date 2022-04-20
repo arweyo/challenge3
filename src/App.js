@@ -74,7 +74,9 @@ function App() {
       getData(selectedCities[1].timezone, true);
       const saveInter = setInterval(() => getData(selectedCities[1].timezone, false), 1000);
       setSavedInterval(saveInter);
-
+    }
+    else{
+      clearInterval(savedInterval);
     }
 
     let tempCities = [];
