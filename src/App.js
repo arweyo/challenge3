@@ -53,7 +53,7 @@ function App() {
 
   const getData = (city) => {
     Axios({
-      url: `https://worldtimeapis.org/api/timezone/${city} `,
+      url: `https://worldtimeapi.org/api/timezone/${city} `,
     })
       .then((response) => {
         //  const utcParse=parseInt(response.data.utc_offset.substring(0,3))
