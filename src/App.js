@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() => {
     Axios({
-      url: "http://worldtimeapi.org/api/timezone",
+      url: "https://worldtimeapi.org/api/timezone",
     })
       .then((response) => {
         setList(response.data.map(x => { return { label: x }; }));
@@ -38,7 +38,7 @@ function App() {
 
   const addCity = (city) => {
     Axios({
-      url: `http://worldtimeapi.org/api/timezone/${city} `,
+      url: `https://worldtimeapi.org/api/timezone/${city} `,
     })
       .then((response) => {
         setSelectedCities([...selectedCities, response.data])
@@ -53,7 +53,7 @@ function App() {
 
   const getData = (city) => {
     Axios({
-      url: `http://worldtimeapi.org/api/timezone/${city} `,
+      url: `http://worldtimeapis.org/api/timezone/${city} `,
     })
       .then((response) => {
         //  const utcParse=parseInt(response.data.utc_offset.substring(0,3))
